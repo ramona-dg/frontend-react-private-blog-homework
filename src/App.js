@@ -36,19 +36,19 @@ function App() {
             </nav>
 
             <Switch>
-                <Route path="/">
+                <Route exact path="/">
                     <HomePage/>
                 </Route>
 
-                <Route path="/login">
+                <Route exact path="/login">
                     <LoginPage/>
                 </Route>
 
-                <Route path="/blogposts">
+                <Route exact path="/blogposts">
                     <OverviewBlogPage/>
                 </Route>
 
-                <Route path="/blogposts/:blogId">
+                <Route exact  path="/blogposts/:blogId">
                     <BlogPostPage/>
                 </Route>
 

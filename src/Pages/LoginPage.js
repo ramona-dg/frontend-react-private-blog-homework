@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 function LoginPage() {
     return (
         <>
-            <p>Hier komt de inlogbutton met "Inloggen" die je doorstuurt naar overzichtpagina</p>
+            <Link to="/blogposts">
+                <button>Inloggen</button>
+            </Link>
+
         </>
     );
 }
