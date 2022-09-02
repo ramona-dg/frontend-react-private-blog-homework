@@ -1,14 +1,23 @@
 import React from 'react';
+import posts from '../data/posts.json';
+import { Link } from "react-router-dom";
 
 function OverviewBlogPage() {
+
     return (
-        <>
-            <p>
-                Hier komt De Blog Overzicht pagina bevat de totale hoeveelheid posts (getal) en alle blog-titels. De
-                titels zijn
-                links die je doorlinken naar die specifieke post
-            </p>
-        </>
+        <section>
+            <h1>Blog overzichtspagina</h1>
+            <h3>Aantal blogposts: {posts.length}</h3>
+            <ul>
+                {posts.map((post) => {
+                    return <li key={post.id}>
+                        <Link to={`blog/${post.id}`}>
+                            {post.title}
+                        </Link>
+                    </li>
+                })}
+            </ul>
+        </section>
     );
 }
 
