@@ -2,7 +2,7 @@ import React from 'react';
 import posts from '../data/posts.json';
 import { Link } from "react-router-dom";
 
-function OverviewBlogPage() {
+function Overview() {
 
     return (
         <section>
@@ -21,4 +21,4 @@ function OverviewBlogPage() {
     );
 }
 
-export default OverviewBlogPage;
+export default Overview;
